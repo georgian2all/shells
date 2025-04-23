@@ -12,3 +12,20 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH \
   -dMonoImageResolution=72 \
   -sOutputFile=output.pdf "input.pdf"
 
+
+If content is scanned JPGs
+
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH \
+  -dAutoRotatePages=/None \
+  -dColorImageDownsampleType=/Bicubic \
+  -dColorImageResolution=72 \
+  -dGrayImageDownsampleType=/Bicubic \
+  -dGrayImageResolution=72 \
+  -dMonoImageDownsampleType=/Subsample \
+  -dMonoImageResolution=72 \
+  -dEncodeColorImages=true \
+  -dColorImageFilter=/DCTEncode \
+  -dJPEGQ=10 \
+  -sOutputFile=output.pdf "ED.DIDACTICCA SI PEDAGOGICA-PORTOCALIUL.pdf"
+
+
