@@ -1,1 +1,14 @@
 gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -sOutputFile=output.pdf input.pdf 
+
+
+
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH \
+  -dAutoRotatePages=/None \
+  -dColorImageDownsampleType=/Bicubic \
+  -dColorImageResolution=72 \
+  -dGrayImageDownsampleType=/Bicubic \
+  -dGrayImageResolution=72 \
+  -dMonoImageDownsampleType=/Subsample \
+  -dMonoImageResolution=72 \
+  -sOutputFile=output.pdf "input.pdf"
+
